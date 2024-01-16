@@ -27,5 +27,6 @@ const firebaseConfig = {
     }
   )
 
+  // exporting
   export const auth = getAuth();
   export const signInWithGooglePopup = ()=> signInWithPopup(auth, provider);
