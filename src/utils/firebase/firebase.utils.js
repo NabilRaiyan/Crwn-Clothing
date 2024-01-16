@@ -14,7 +14,7 @@ const firebaseConfig = {
     appId: "1:26261116112:web:fa0ceda0dac98210e57ad5"
   };
   
-  // Initialize Firebase
+  // Initialize Firebase App
   const firebaseApp = initializeApp(firebaseConfig);
 
   // Initialize google provide
