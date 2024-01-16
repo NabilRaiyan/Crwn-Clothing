@@ -2,6 +2,7 @@ import { signInWithGooglePopup } from '../../utils/firebase/firebase.utils';
 
 const SignIn = ()=>{
 
+    // logginng in user who signed in using google account 
     const logGoogleUser = async () =>{
         const response = await signInWithGooglePopup();
         console.log(response);
