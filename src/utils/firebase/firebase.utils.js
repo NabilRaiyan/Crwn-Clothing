@@ -43,10 +43,13 @@ const firebaseConfig = {
 
     // if user does not exist in the db
     if (!userSnapShot.exists()){
+
+      // getting data and created date
       const {displayName, email } = userAuth;
       const createDate = new Date();
 
       try{
+        // setting user data on firestore
         await setDoc(userDocRef, {
           displayName,
           email,
