@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-
+// default format for user
 const defaultFormFields = {
     displayName: '',
     email: '',
@@ -14,16 +14,16 @@ const SignUp = ()=>{
     const [ formFields, setFormFields ] = useState(defaultFormFields);
     const { displayName, email, password, confirmPassword } = formFields;
 
-    console.log(formFields)
+    // console.log(formFields)
 
-
+    // on user input field change
     const handleChnage = (event)=>{
         const { name, value } = event.target;
         setFormFields({...formFields, [name]: value});
     }
 
     return(
-        // adding form
+        // adding form and functionality
         <div>
            <form onSubmit={()=>{}}>
                 <h1>Sign up form using email and password</h1>
