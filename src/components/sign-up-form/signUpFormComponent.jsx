@@ -1,6 +1,17 @@
+import { useState } from "react";
 
+
+const defaultFormFields = {
+    displayName: '',
+    email: '',
+    password: '',
+    confirmPassword: '',
+}
 
 const SignUp = ()=>{
+
+    const [ formFields, setFormFields ] = useState(defaultFormFields);
+    const { displayName, email, password, confirmPassword } = formFields;
 
     return(
         <div>
