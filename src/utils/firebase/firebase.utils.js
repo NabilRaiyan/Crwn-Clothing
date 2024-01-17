@@ -35,6 +35,31 @@ const firebaseConfig = {
   const db = getFirestore();
 
   export const createUserDocumentFromAuth = async (userAuth)=>{
-    const useDocRef = doc(db, 'users', userAuth.uid);
-    console.log(useDocRef);
+    const userDocRef = doc(db, 'users', userAuth.uid);
+    console.log(userDocRef);
+
+    // fetching data
+    const userSnapShot = await getDoc(userDocRef);
+
+    // if user does not exist in the db
+    if (!userSnapShot.exists()){
+      const {displayName, email } = userAuth;
+      const createDate = new Date();
+
+      try{
+        await setDoc(userDocRef, {
+          displayName,
+          email,
+          createDate,
+        });
+      }
+      catch(err){
+        console.log('error creating the user: ',err);
+      }
+    }
+
+    return userDocRef;
+
   }
+
+
