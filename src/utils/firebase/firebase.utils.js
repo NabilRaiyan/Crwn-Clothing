@@ -34,7 +34,7 @@ const firebaseConfig = {
 
   const db = getFirestore();
 
-  export const createUserDocumentFromAuth = async (userAuth)=>{
+  export const createUserDocumentFromAuth = async (userAuth, additionInformation = {})=>{
     if (!userAuth) return;
     
     const userDocRef = doc(db, 'users', userAuth.uid);
@@ -56,6 +56,7 @@ const firebaseConfig = {
           displayName,
           email,
           createDate,
+          ...additionInformation,
         });
       }
       catch(err){
