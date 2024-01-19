@@ -3,7 +3,7 @@ import { Outlet, Link } from "react-router-dom";
 import { ReactComponent as CrwnLogo } from "../../assets/crown.svg";
 import './navigation.style.scss';
 
-
+// creating navigation functional component
 const Navigation = ()=>{
     return (
       <Fragment>
