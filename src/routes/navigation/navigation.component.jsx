@@ -21,9 +21,9 @@ const Navigation = ()=>{
                   SIGN IN
                 </Link>
 
-                <Link className="nav-link" to='/sign-up'>
+                {/* <Link className="nav-link" to='/sign-up'>
                   SIGN UP
-                </Link>
+                </Link> */}
             </div>
         </div>
         <Outlet />
