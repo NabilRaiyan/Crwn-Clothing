@@ -7,6 +7,7 @@ import './navigation.style.scss';
 const Navigation = ()=>{
     return (
       <Fragment>
+        {/* Links for nav bar */}
         <div className="navigation">
             <Link className="logo-container" to='/'>
                 <CrwnLogo className="logo" />

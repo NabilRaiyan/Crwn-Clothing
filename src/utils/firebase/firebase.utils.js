@@ -34,9 +34,9 @@ const firebaseConfig = {
 
   const db = getFirestore();
 
+  // creating use documents and user data
   export const createUserDocumentFromAuth = async (userAuth, additionInformation = {})=>{
     if (!userAuth) return;
-    
     const userDocRef = doc(db, 'users', userAuth.uid);
     //console.log(userDocRef);
 
@@ -68,6 +68,7 @@ const firebaseConfig = {
 
   }
 
+  // creating user sign up with email and password
   export const createAuthUserWithEmailAndPassword = async (email, password)=>{
     if (!email || !password) return;
 
