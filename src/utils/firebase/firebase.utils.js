@@ -1,5 +1,5 @@
 import { initializeApp } from 'firebase/app';
-import { getAuth, GoogleAuthProvider, signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
+import { getAuth, GoogleAuthProvider, createUserWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
 import { doc, getDoc, getFirestore, setDoc } from 'firebase/firestore';
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -38,7 +38,7 @@ const firebaseConfig = {
     if (!userAuth) return;
     
     const userDocRef = doc(db, 'users', userAuth.uid);
-    console.log(userDocRef);
+    //console.log(userDocRef);
 
     // fetching data
     const userSnapShot = await getDoc(userDocRef);
@@ -67,10 +67,10 @@ const firebaseConfig = {
 
   }
 
-  export const createAuthUserWithEmailAndPassword = async (auth, email, password)=>{
+  export const createAuthUserWithEmailAndPassword = async (email, password)=>{
     if (!email || !password) return;
 
-    return await createAuthUserWithEmailAndPassword(auth, email, password);
+    return await createUserWithEmailAndPassword(auth, email, password);
   }
 
 
