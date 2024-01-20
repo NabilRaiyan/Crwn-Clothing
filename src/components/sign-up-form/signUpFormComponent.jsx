@@ -62,7 +62,9 @@ const SignUp = ()=>{
 
     return(
         // adding form and functionality
-        <div>
+        <div className="sign-up-container">
+           <h2>Don't have an account?</h2>
+           <span>Sign Up with your eamil and password.</span>
            <form onSubmit={handleSubmit}>
                 <h1>Sign up form using email and password</h1>
                 
