@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { createAuthUserWithEmailAndPassword, createUserDocumentFromAuth } from "../../utils/firebase/firebase.utils";
+import { signInWithGooglePopup, createUserDocumentFromAuth } from "../../utils/firebase/firebase.utils";
 import FormInput from "../input-field/input-field.component";
 import './sign-in-form.styles.scss';
 import Button from "../button-component/button";
@@ -13,6 +13,13 @@ const defaultFormFields = {
 
 // sing in component
 const SignIn = ()=>{
+
+
+     // logginng in user who signed in using google account using async() function
+     const signInWithGoogle = async () =>{
+        const { user } = await signInWithGooglePopup();
+        await createUserDocumentFromAuth(user);
+    }
 
     const [ formFields, setFormFields ] = useState(defaultFormFields);
     const { email, password } = formFields;
@@ -54,6 +61,7 @@ const SignIn = ()=>{
                 <FormInput label='Email' type="email" required name="email" value={email} onChange={handleChnage}/>
                 <FormInput label='Password' type="password" required name="password" value={password} onChange={handleChnage}/>
                 <Button type="submit">SIGN IN</Button>
+                <Button onClick={signInWithGoogle} buttonType='google'>SIGN IN WITH GOOGLE</Button>
            </form>
         </div>
     );
