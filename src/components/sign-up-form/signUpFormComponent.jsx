@@ -2,7 +2,7 @@ import { useState } from "react";
 import { createAuthUserWithEmailAndPassword, createUserDocumentFromAuth } from "../../utils/firebase/firebase.utils";
 import FormInput from "../input-field/input-field.component";
 import './sign-up-form.styles.scss';
-
+import Button from "../button-component/button";
 
 // default format for user
 const defaultFormFields = {
@@ -71,7 +71,7 @@ const SignUp = ()=>{
                 <FormInput label='Email' type="email" required name="email" value={email} onChange={handleChnage}/>
                 <FormInput label='Password' type="password" required name="password" value={password} onChange={handleChnage}/>
                 <FormInput label='Confirm Password' type="password" required name="confirmPassword" value={confirmPassword} onChange={handleChnage}/>
-                <button type="submit">SIGN UP</button>
+                <Button type="submit">SIGN UP</Button>
            </form>
         </div>
     );
