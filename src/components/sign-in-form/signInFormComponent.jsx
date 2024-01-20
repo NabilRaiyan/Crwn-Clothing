@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { signInWithGooglePopup, createUserDocumentFromAuth } from "../../utils/firebase/firebase.utils";
+import { signInWithGooglePopup, createUserDocumentFromAuth, signInAuthWithEmailAndPassword } from "../../utils/firebase/firebase.utils";
 import FormInput from "../input-field/input-field.component";
 import './sign-in-form.styles.scss';
 import Button from "../button-component/button";
@@ -34,14 +34,15 @@ const SignIn = ()=>{
     const handleSubmit = async (event)=>{
         event.preventDefault();
 
-        try{
-            
-
-        }catch(err){
+        try
+        {
+            const response = await signInAuthWithEmailAndPassword(email, password);
+            console.log(response);
+            resetFormField();
+        }
+        catch(err){
             
         }
-        
-       
     }
 
     // on user input field change
@@ -60,8 +61,10 @@ const SignIn = ()=>{
                 
                 <FormInput label='Email' type="email" required name="email" value={email} onChange={handleChnage}/>
                 <FormInput label='Password' type="password" required name="password" value={password} onChange={handleChnage}/>
-                <Button type="submit">SIGN IN</Button>
-                <Button onClick={signInWithGoogle} buttonType='google'>SIGN IN WITH GOOGLE</Button>
+                <div className="buttons-container">
+                    <Button type="submit">SIGN IN</Button>
+                    <Button onClick={signInWithGoogle} buttonType='google'>GOOGLE SIGN IN</Button>
+                </div>
            </form>
         </div>
     );
