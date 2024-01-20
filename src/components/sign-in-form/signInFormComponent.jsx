@@ -13,8 +13,6 @@ const defaultFormFields = {
 
 // sing in component
 const SignIn = ()=>{
-
-
      // logginng in user who signed in using google account using async() function
      const signInWithGoogle = async () =>{
         const { user } = await signInWithGooglePopup();
@@ -71,7 +69,7 @@ const SignIn = ()=>{
                 <FormInput label='Password' type="password" required name="password" value={password} onChange={handleChnage}/>
                 <div className="buttons-container">
                     <Button type="submit">SIGN IN</Button>
-                    <Button onClick={signInWithGoogle} buttonType='google'>GOOGLE SIGN IN</Button>
+                    <Button type="button" onClick={signInWithGoogle} buttonType='google'>GOOGLE SIGN IN</Button>
                 </div>
            </form>
         </div>
