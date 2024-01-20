@@ -34,14 +34,22 @@ const SignIn = ()=>{
     const handleSubmit = async (event)=>{
         event.preventDefault();
 
+        // signing in with email and password
         try
         {
             const response = await signInAuthWithEmailAndPassword(email, password);
             console.log(response);
             resetFormField();
         }
-        catch(err){
-            
+        // handling error
+        catch(error){
+            switch(error.code){
+                case 'auth/invalid-credential':
+                    alert("Please enter correct email and password");
+                    break;
+                default: 
+                    console.log(error);
+            }
         }
     }
 
