@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { createAuthUserWithEmailAndPassword, createUserDocumentFromAuth } from "../../utils/firebase/firebase.utils";
 import FormInput from "../input-field/input-field.component";
+import './sign-up-form.styles.scss';
 
 
 // default format for user
@@ -12,9 +13,7 @@ const defaultFormFields = {
     
 }
 
-
-
-
+// sing up component
 const SignUp = ()=>{
 
     const [ formFields, setFormFields ] = useState(defaultFormFields);
