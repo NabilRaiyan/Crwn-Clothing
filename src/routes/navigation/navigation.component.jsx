@@ -21,14 +21,14 @@ const Navigation = ()=>{
                 <Link className="nav-link" to='/shop'>
                     SHOP
                 </Link>
-
-                <Link className="nav-link" to='/authentication'>
-                  SIGN IN
-                </Link>
-
-                {/* <Link className="nav-link" to='/sign-up'>
-                  SIGN UP
-                </Link> */}
+                {
+                  // if we have a current user that means user has logged in and we need to render SIGN OUT button
+                  currentUser ? (
+                    <span className="nav-link">SIGN OUT</span>
+                  ):(
+                    <Link className="nav-link" to='/authentication'>SIGN IN</Link>
+                  )
+                }
             </div>
         </div>
         <Outlet />
