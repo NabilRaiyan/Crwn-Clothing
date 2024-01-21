@@ -1,5 +1,5 @@
 import { initializeApp } from 'firebase/app';
-import { signOut, getAuth, GoogleAuthProvider, createUserWithEmailAndPassword, signInWithPopup, signInWithEmailAndPassword } from 'firebase/auth';
+import { signOut, getAuth, GoogleAuthProvider, createUserWithEmailAndPassword, signInWithPopup, signInWithEmailAndPassword, onAuthStateChanged } from 'firebase/auth';
 import { doc, getDoc, getFirestore, setDoc } from 'firebase/firestore';
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -83,5 +83,10 @@ const firebaseConfig = {
   // sign out user
   export const signOutUser = async ()=>{
     await signOut(auth);
+  }
+
+  // on auth state change
+  export const onAuthStateChangedListener = (callback)=>{
+    onAuthStateChanged(auth, callback);
   }
 

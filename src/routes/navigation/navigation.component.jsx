@@ -14,7 +14,7 @@ const Navigation = ()=>{
     signOutUser();
     await setCurrentUser(null);
   }
-  console.log(currentUser);
+  //console.log(currentUser);
     return (
       <Fragment>
         {/* Links for nav bar */}
