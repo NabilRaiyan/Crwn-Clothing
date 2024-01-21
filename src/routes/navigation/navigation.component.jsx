@@ -10,10 +10,10 @@ const Navigation = ()=>{
 
   const { currentUser, setCurrentUser } = useContext(UserContext);
 
-  const signOutHandler = async ()=>{
-    signOutUser();
-    await setCurrentUser(null);
-  }
+  // const signOutHandler = async ()=>{
+  //   signOutUser();
+  //   await setCurrentUser(null);
+  // }
   //console.log(currentUser);
     return (
       <Fragment>
@@ -30,7 +30,7 @@ const Navigation = ()=>{
                 {
                   // if we have a current user that means user has logged in and we need to render SIGN OUT button
                   currentUser ? (
-                    <span className="nav-link" onClick={signOutHandler}>SIGN OUT</span>
+                    <span className="nav-link" onClick={signOutUser}>SIGN OUT</span>
                   ):(
                     <Link className="nav-link" to='/authentication'>SIGN IN</Link>
                   )

@@ -2,7 +2,7 @@ import { useState, useContext } from "react";
 import { signInWithGooglePopup, createUserDocumentFromAuth, signInAuthWithEmailAndPassword } from "../../utils/firebase/firebase.utils";
 import FormInput from "../input-field/input-field.component";
 import './sign-in-form.styles.scss';
-import { UserContext } from "../../contexts/user.context";
+//import { UserContext } from "../../contexts/user.context";
 import Button from "../button-component/button";
 
 // default format for user
@@ -16,14 +16,13 @@ const defaultFormFields = {
 const SignIn = ()=>{
      // logginng in user who signed in using google account using async() function
      const signInWithGoogle = async () =>{
-        const { user } = await signInWithGooglePopup();
-        await createUserDocumentFromAuth(user);
+        await signInWithGooglePopup();
     }
 
     const [ formFields, setFormFields ] = useState(defaultFormFields);
     const { email, password } = formFields;
     // setting current user
-    const { setCurrentUser } = useContext(UserContext);
+    //const { setCurrentUser } = useContext(UserContext);
 
     const resetFormField = ()=>{
         setFormFields(defaultFormFields);
