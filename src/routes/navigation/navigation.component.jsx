@@ -4,6 +4,7 @@ import { ReactComponent as CrwnLogo } from "../../assets/crown.svg";
 import './navigation.style.scss';
 import { UserContext} from '../../../src/contexts/user.context';
 import { signOutUser } from "../../utils/firebase/firebase.utils";
+import CartIcon from "../../components/cart-icon/cart-icon";
 
 // creating navigation functional component
 const Navigation = ()=>{
@@ -35,6 +36,7 @@ const Navigation = ()=>{
                     <Link className="nav-link" to='/authentication'>SIGN IN</Link>
                   )
                 }
+                <CartIcon />
             </div>
         </div>
         <Outlet />
