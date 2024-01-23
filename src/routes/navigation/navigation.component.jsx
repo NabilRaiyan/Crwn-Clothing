@@ -5,6 +5,7 @@ import './navigation.style.scss';
 import { UserContext} from '../../../src/contexts/user.context';
 import { signOutUser } from "../../utils/firebase/firebase.utils";
 import CartIcon from "../../components/cart-icon/cart-icon";
+import CartDropDown from "../../components/cart-dropdown/cart-dropdown.component";
 
 // creating navigation functional component
 const Navigation = ()=>{
@@ -38,6 +39,7 @@ const Navigation = ()=>{
                 }
                 <CartIcon />
             </div>
+            <CartDropDown />
         </div>
         <Outlet />
       </Fragment>
