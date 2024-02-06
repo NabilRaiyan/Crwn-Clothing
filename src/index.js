@@ -9,7 +9,7 @@ import { ProductsProvider } from './contexts/products.context';
 import { CartProvider } from './contexts/cart.context';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-// rendering react app
+// rendering react app and using Fragment
 root.render(
   <React.StrictMode>
     <BrowserRouter >
