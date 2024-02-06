@@ -5,7 +5,7 @@ import './cart-dropdown.styles.scss'
 import Button from '../button-component/button'
 import CartItem from '../cart-item/cart-item'
 
-
+// making card drop down functionality
 const CartDropDown = ()=>{
     const {cartItems} = useContext(CartContext);
     // useing useNavigate() hook to navigate to the checkout page after click button
