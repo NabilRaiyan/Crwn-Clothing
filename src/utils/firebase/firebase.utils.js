@@ -59,6 +59,7 @@ const firebaseConfig = {
           ...additionInformation,
         });
       }
+      // catching error if there is any
       catch(err){
         console.log('error creating the user: ',err);
       }
