@@ -8,7 +8,7 @@ import CHECKOUT from './routes/checkout/checkout.component';
 
 
 
-
+// creating main app
 const App = ()=> {
   return (
     // Rendering home page
