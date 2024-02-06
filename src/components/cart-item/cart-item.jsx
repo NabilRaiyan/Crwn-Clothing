@@ -1,5 +1,7 @@
 import './cart-item.styles.scss';
 
+
+// creating cart item container
 const CartItem = ({cartItem})=>{
     const { name, quantity, price, imageUrl } = cartItem;
     return(
