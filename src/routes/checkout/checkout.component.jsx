@@ -3,8 +3,6 @@ import { CartContext } from "../../contexts/cart.context";
 // checkout functionality
 const CHECKOUT = ()=>{
     const {cartItems, addItemToCart} = useContext(CartContext)
-
-    
     return(
         <div>
             <h1>CHECKOUT PAGE</h1>
