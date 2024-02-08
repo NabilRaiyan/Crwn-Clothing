@@ -7,7 +7,7 @@ const CHECKOUT = ()=>{
         <div>
             <h1>CHECKOUT PAGE</h1>
             <div>
-            {
+            {   // getting items form list
                 cartItems.map((cartItem)=>{
                     const {id, name, quantity} = cartItem;
                     const itemIncreaseHandler = ()=>{
