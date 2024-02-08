@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { CartContext } from "../../contexts/cart.context";
-// checkout functionality
+// funtion for checkout functionality
 const CHECKOUT = ()=>{
     const {cartItems, addItemToCart} = useContext(CartContext)
     return(
