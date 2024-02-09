@@ -1,2 +1,2 @@
 ## Crwn-Clothing
-### Crwn-Clothing is an E-commerce Website using React and Firebase
+### Crwn-Clothing is an E-commerce Website built using React.js and Firebase. It allows users to browse products, add them to the cart, and complete the checkout process.
