@@ -20,4 +20,12 @@
     ``` bash
     https://github.com/NabilRaiyan/Crwn-Clothing.git
     ```
+    - Navigate to the project directory
+    - Install dependencies using npm or yarn
+    ``` bash
+    yarn install
+    ```
+    ``` bash
+    npm install
+    ```
   
