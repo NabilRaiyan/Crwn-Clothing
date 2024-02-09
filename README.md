@@ -1,2 +1,2 @@
-## Introduction to the project
-This is a clothing website that I developed using react and firebase.
+## Crwn-Clothing
+### Crwn-Clothing is an E-commerce Website using React and Firebase
