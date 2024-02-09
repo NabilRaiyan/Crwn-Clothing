@@ -13,3 +13,11 @@
   - Shopping cart: Users can add products to the cart, update quantities, and remove items.
   - Checkout process: Users can enter shipping details and complete the checkout process securely.
   - Firebase integration: Firebase Firestore is used for storing product and user data, while Firebase Authentication is used for user authentication.
+
+## Installation
+  - To run this project locally, follow these steps:
+    - Clone the repository to your local machine:
+    ``` bash
+    https://github.com/NabilRaiyan/Crwn-Clothing.git
+    ```
+  
