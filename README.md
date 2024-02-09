@@ -16,16 +16,16 @@
 
 ## Installation
   - To run this project locally, follow these steps:
-  1. Clone the repository to your local machine:
-    ``` bash
-    https://github.com/NabilRaiyan/Crwn-Clothing.git
-    ```
-  2. Navigate to the project directory
-  3. Install dependencies using npm or yarn
-    ``` bash
-    yarn install
-    ```
-    ``` bash
-    npm install
-    ```
+    - Clone the repository to your local machine:
+      ``` bash
+      https://github.com/NabilRaiyan/Crwn-Clothing.git
+      ```
+    - Navigate to the project directory
+    - Install dependencies using npm or yarn
+      ``` bash
+      yarn install
+      ```
+      ``` bash
+      npm install
+      ```
   
