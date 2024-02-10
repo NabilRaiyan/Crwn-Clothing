@@ -9,7 +9,7 @@
 
 ## Features
   - User authentication: Users can sign up, log in, and log out securely using Firebase authentication.
-  - Product browsing: Users can view a list of products, filter them based on categories, and view product details.
+  - Product Browsing: Users can view a list of products, filter them based on categories, and view product details.
   - Shopping cart: Users can add products to the cart, update quantities, and remove items.
   - Checkout process: Users can enter shipping details and complete the checkout process securely.
   - Firebase integration: Firebase Firestore is used for storing product and user data, while Firebase Authentication is used for user authentication.
