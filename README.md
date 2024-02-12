@@ -7,7 +7,6 @@
   - [Usage](#usages)
   - [License](#license)
 
-
 ## Features
   - User authentication: Users can sign up, log in, and log out securely using Firebase authentication.
   - Product Browsing: Users can view a list of products, filter them based on categories, and view product details.
