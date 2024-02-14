@@ -1,6 +1,6 @@
 import { createContext, useState, useEffect } from "react";
 
-
+// adding items to the cart
 const addCartItem = (cartItems, productToAdd)=>{
     // find if cart item contains product to add
     const existingCartItem = cartItems.find((cartItem)=>
@@ -62,7 +62,7 @@ export const CartProvider = ({children})=>{
         setCartItems(removeCartItem(cartItems, cartItemToRemove));
     }
 
-    const value = {isCartOpen, setIsCartOpen, addItemToCart, cartItems, cartCount}
+    const value = {isCartOpen, setIsCartOpen, addItemToCart, cartItems, cartCount, removeItemToCart}
     return(
         <CartContext.Provider value={value}>{children}</CartContext.Provider>
     )
