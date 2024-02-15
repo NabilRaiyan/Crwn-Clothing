@@ -5,7 +5,7 @@ import CheckoutItem from "../../components/checkout-item/checkout-item.component
 
 // funtion for checkout functionality
 const CHECKOUT = ()=>{
-    const {cartItems} = useContext(CartContext)
+    const {cartItems, cartTotal} = useContext(CartContext)
     return(
         <div className="checkout-container">
             <div className="checkout-block">
@@ -34,7 +34,7 @@ const CHECKOUT = ()=>{
                 
             )})
         } 
-        <span className="total">Total: </span>
+        <span className="total">Total: {cartTotal}</span>
         </div>
     )
 }
