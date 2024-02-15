@@ -36,6 +36,7 @@ const addCartItem = (cartItems, productToAdd)=>{
     // clearing items from cart
     const clearCartItem = (cartItems, cartItemToClear)=>{
         return cartItems.filter(cartItem => cartItem.id !== cartItemToClear.id);
+        
     }
 
 
