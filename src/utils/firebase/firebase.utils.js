@@ -33,7 +33,8 @@ const firebaseConfig = {
   export const signInWithGooglePopup = ()=> signInWithPopup(auth, provider);
 
   const db = getFirestore();
-
+  
+  // adding collections to the fire store db
   export const addCollectionAndDocuments = async (collectionKey, objectsToAdd)=>{
     const collectionRef = collection(db, collectionKey);
 
@@ -49,16 +50,16 @@ const firebaseConfig = {
   };
 
   export const getCategoriesAndDocuments = async ()=>{
-    const collectionRef = collection(db, 'category');
+    const collectionRef = collection(db, 'categories');
     const q = query(collectionRef);
 
-    const querySnapShot = await getDoc(q);
+    const querySnapShot = await getDocs(q);
     const categoryMap = querySnapShot.docs.reduce((acc, docSnapShot)=>{
       const {title, items} = docSnapShot.data();
       acc[title.toLowerCase()] = items;
       return acc;
     }, {});
-    
+
     return categoryMap;
   }
 
