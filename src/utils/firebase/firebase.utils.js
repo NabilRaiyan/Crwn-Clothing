@@ -1,6 +1,6 @@
 import { initializeApp } from 'firebase/app';
 import { signOut, getAuth, GoogleAuthProvider, createUserWithEmailAndPassword, signInWithPopup, signInWithEmailAndPassword, onAuthStateChanged } from 'firebase/auth';
-import { doc, getDoc, getFirestore, setDoc } from 'firebase/firestore';
+import { doc, getDoc, getFirestore, setDoc, collection, writeBatch } from 'firebase/firestore';
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -33,6 +33,10 @@ const firebaseConfig = {
   export const signInWithGooglePopup = ()=> signInWithPopup(auth, provider);
 
   const db = getFirestore();
+
+  export const addCollectionAndDocuments = (collectionKey, objectsToAdd)=>{
+    const collectionRef = collection(db, collectionKey);
+  }
 
   // creating use documents and user data
   export const createUserDocumentFromAuth = async (userAuth, additionInformation = {})=>{
